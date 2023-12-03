@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Farah Khairudin Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/sec.css" />
+        <link href='https://fonts.googleapis.com/css?family=Gaegu|Uncial Antiqua' rel='stylesheet'>
+        <link href='https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css' rel='stylesheet'>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/img4.gif" alt="" /></span>
+					<h1 id="logo"><a target="_blank" rel="noopener noreferrer">Sales Performance Dashboard</a></h1>
+					
+				</header>
+
+                <nav id="nav">
+					<ul>
+						<li>Tools used:</li>
+						<li><i class="ms-Icon ms-Icon--PowerBILogo" style="font-size:24px;"></i></li>
+						<li>Microsoft Power BI</li>
+					</ul>
+				</nav>
+
+				<footer>
+                    
+					<ul class="icons">
+                        <li><a href="index.html" target="_blank" rel="noopener noreferrer"> Back to mainpage</a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<!-- <div class="image main" data-position="center">
+									<img src="images/banner.jpg" alt="" />
+								</div>-->
+								<div class="container">
+									<header class="major">
+										<b><a href="index.html" target="_blank" rel="noopener noreferrer"> Back</a></b></p>
+										<h2>Sales Performance Dashboard</h2>
+										<p></p>
+									</header>
+									
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>Data Sources</h3>
+									<p>This dataset contains 7 tables in CSV format and 1 import data from Canada population website;
+                                        <p>1.	CSV File : 2018 Sales, 2019 Sales, 2020 Sales, Products, Locations, Customers, Sales People
+                                        <br> 2.	Website : <a href="https://www.california-demographics.com/" >https://www.california-demographics.com/ </a>
+                                    </p>
+									<div class="features">
+
+										<article>
+											<a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/pic1.jpg" alt="" /><img src="images/subpage/pic2.jpg" alt="" /></a>
+											<div class="" >
+												<h3><br><a target="_blank" rel="noopener noreferrer">Business Request & User Stories</a></h3>
+												<p>As the participants of the Power BI Workshop, we have identified the need to analyze the sales performance of the chosen business. 
+                                                    The aim is to empower workshop participants with practical insights into key metrics related to sales to enhance the understanding of business intelligence and analytics.<br><br>
+													<a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/img2.jpg" alt="" /></a>
+											</div>
+										</article>
+
+                                        <article>
+											<a class="image" target="_blank" rel="noopener noreferrer"></a><img src="" alt="" /></a>
+											<div class="" >
+												<h3><a target="_blank" rel="noopener noreferrer">Data Cleansing and ETL</a></h3>
+												<p>Following steps were done in Power BI to transform this table to be ready for analysis purposes:
+                                                    <p>1.	Remove Median Income, Land Area, Water Area and Time Zone Columns in Locations Table.
+                                                    <br>2.	Duplicate State columns and split the column by number of character of 4 to form a result of ‘California’ to ‘Cali’ and ‘fornia’.
+                                                    <br>3.	Remove columns that contain data of ‘fornia’ and Uppercased the ‘CALI’ text for improved data quality.
+                                                    <br>4.	Rename previous duplicated columns as ‘State Short’ give better business friendly names.
+                                                    <br>5.	Merge the table Locations and Populations Data.
+                                                    <br>6.	Remove previous Populations Data column to replace new populations data that import from web.
+                                                    <br>7.	Rename the Populations Data columns as ‘Population’.
+                                                    <br>8.	Create new conditional column for Population Density.
+                                                    <br>9.	Replace errors from Population Density columns that contain ‘null’ as ‘No Data’.
+                                                        </br>
+
+                                                    </p>
+													<a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/pic3.jpg" alt="" /><img src="images/subpage/pic4.jpg" alt="" /></a>
+											</div>
+										</article>
+
+                                        <article>
+											<div class="" >
+												<h3><a target="_blank" rel="noopener noreferrer">M-Code for Date Table</a></h3>
+                                                <a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/pic5.jpg" alt="" /></a>
+                                                <h3><br><a target="_blank" rel="noopener noreferrer">Set Parameters to create Date Table</a></h3>
+                                                <a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/pic6.jpg" alt="" /></a>
+											</div>
+										</article>
+
+                                        <article>
+											<a class="image" target="_blank" rel="noopener noreferrer"></a>
+											<div class="" >
+												<h3><a target="_blank" rel="noopener noreferrer">Data Model</a></h3>
+												<p>Below is a screenshot of the data model after cleansed and prepared tables were read into Power BI.<p>
+                                                    We can see that the SALES table is connected to five dimension tables with the correct relationship established (1 to *) between locations, salespeople, customers, products and dates tables.<br><br>
+													<a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/pic7.jpg" alt="" /></a>
+											</div>
+										</article>
+
+                                        <article>
+											<a class="image" target="_blank" rel="noopener noreferrer"></a>
+											<div class="" >
+												<h3><a target="_blank" rel="noopener noreferrer">Calculations</a></h3>
+												<p>The following calculations were created in the Power BI reports using DAX (Data Analysis Expressions):<p>
+                                                    <b>Cumulative Sales</b> = 
+                                                    <br>CALCULATE([Total Sales],
+                                                    <br>FILTER(ALLSELECTED(Dates),
+                                                    <br>Dates[Date]<=MAX(Dates[Date])))
+													
+                                                    <p><b>Total Cost</b>  = SUMX(Sales, Sales[Quantity] * RELATED(Products[Cost]))
+                                                    
+                                                    <p><b>Total Sales</b> = SUMX(Sales, [Total Quantity] * Sales[Price])
+
+                                                    <p><b>Total Profit</b> = [Total Sales] - [Total Cost]
+
+                                                    <p><b>Total Quantity</b> = sum(Sales[Quantity])
+
+                                                    <p><b>Total Transactions</b> = COUNTROWS (Sales)
+                                                    
+                                                    <p><b>Sales LY</b> = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Dates[Date]))
+											</div>
+										</article>
+
+										
+									</div>
+								</div>
+							</section>
+
+                        <!-- Four -->
+                        <section id="three">
+                            <div class="container">
+									<div class="features">
+									<article>
+                                        <a class="image" target="_blank" rel="noopener noreferrer"><img src="" alt="" /></a>
+                                        <div class="" >
+                                            <h3><br><a target="_blank" rel="noopener noreferrer">Dashboard Overview</a></h3>
+                                                <a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/pic9.jpg" alt="" />
+                                                    <br><img src="images/subpage/pic10.jpg" alt="" /></a>
+                                                <p><p><b>Key Insights:</b>
+
+                                                <br>•	Los Angeles, Orange and San Diego are the top 3 county that generate the highest total sales.
+                                                <br>•	Profit margin throughout the year of 2018 was the highest, 32.6%
+                                                <br>•	Craig Wright and Ronald Bradley were the top buyers, contributing to the overall sales expands.
+                                        </div>
+                                    </article>
+								</div>
+							</section>
+						 
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li><br><br>
+									
+								<!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

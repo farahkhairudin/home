@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Farah Khairudin Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/sec.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Gaegu|Uncial Antiqua' rel='stylesheet'>
+        <link href='https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css' rel='stylesheet'>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/img3.png" alt="" /></span>
+					<h1 id="logo"><a target="_blank" rel="noopener noreferrer">Marven Market Dashboard</a></h1>
+					
+				</header>
+
+                <nav id="nav">
+					<ul>
+						<li>Tools used:</li>
+						<li><i class="ms-Icon ms-Icon--PowerBILogo" style="font-size:24px;"></i></li>
+						<li>Microsoft Power BI</li>
+					</ul>
+				</nav>
+
+				<footer>
+                    
+					<ul class="icons">
+                        <li><a href="index.html" target="_blank" rel="noopener noreferrer"> Back to mainpage</a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<!-- <div class="image main" data-position="center">
+									<img src="images/banner.jpg" alt="" />
+								</div>-->
+								<div class="container">
+									<header class="major">
+										<b><a href="index.html" target="_blank" rel="noopener noreferrer"> Back</a></b></p>
+										<h2>Marven Market Dashboard</h2>
+										<p></p>
+									</header>
+									
+								</div>
+							</section>
+
+						<!-- Two -->
+                        <section id="two">
+                            <div class="container">
+                                <h3>Project Brief</h3>
+                                <p>The Maven Market dataset analyzed a comprehensive insights into the overall performance of Maven Market, a multi-national grocery chain with locations in Canada, Mexico, and the United States.
+                                    It produced useful insights by identifying new markets, goods, and advertising opportunities and by utilizing forecasts to comprehend upcoming trends and consumer behavior.
+                                </p>
+                                <h3>Project Goals</h3>
+                                <p>Developing a Power BI dashboard to analyze transactions and sales and provide information on pick time distribution and monthly and annual trends.</p>
+                                
+                            </div>
+                        </section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>Data Source</h3>
+									<p>The dataset consists of raw Excel files provided by Maven Analytics where includes data about customers, products, stores, transactions & returns;</p>
+									<div class="features">
+
+										<article>
+											<a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/p1.jpg" alt="" /></a>
+											<center><b><a href="https://mavenanalytics.io/data-playground?pageSize=10" target="_blank" rel="noopener noreferrer"> View dataset</a></b></center>
+                                            <div class="" >
+												<h3><br><atarget="_blank" rel="noopener noreferrer">Business Request & User Stories</a></h3>
+												<p>As a participant in the Microsoft PowerBI Desktop for Business Intelligence (2023) course by Maven Analytics, I have developed the Maven Market Report. 
+                                                    The report is designed to enhance the learning experience of course participants by combining the course instructions with creative elements to showcase practical application and analytical skills.<br><br>
+													<a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/p2.jpg" alt="" /></a>
+											</div>
+										</article>
+
+                                        <article>
+											<a class="image" target="_blank" rel="noopener noreferrer"></a><img src="" alt="" /></a>
+											<div class="" >
+												<h3><a href="" target="_blank" rel="noopener noreferrer">Data Cleansing and ETL</a></h3>
+												<p>Some insight of the project workflow were done in Power BI for analysis purposes:
+                                                    <p>1. Corrected data types, promoted headers, and cleaned null values and duplicates.
+                                                    <br>2. Added new columns for date-time analysis, such as the start of the week and the start of the year.
+                                                    <br>3. Create a new column at table Customer, named as "birth_year"to extract the year from the "birthdate" column, and format as text
+                                                    <br>4. Create a conditional column at table Customer, named as "has_children" which equals "N" if "total_children"= 0, otherwise "Y"
+                                                    <br>5. Replace "null" values with zeros in related columns.
+                                                    <br>6. Add a calculated column at table Products, named as "discount_price", equal to 90% of the original retail price. Format as a fixed decimal number, and then use the rounding tool to round to 2 digits.
+                                                    </br>
+
+                                                    </p>
+													<a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/p3.jpg" alt="" /><img src="images/subpage/p4.jpg" alt="" /><img src="images/subpage/p5.jpg" alt="" /></a>
+											</div>
+										</article>
+
+                                        <article>
+											<a class="image" target="_blank" rel="noopener noreferrer"></a>
+											<div class="" >
+												<h3><a target="_blank" rel="noopener noreferrer">Data Model</a></h3>
+												<p>Below is a screenshot of the data model after cleansed and prepared tables were read into Power BI.<p>
+													<a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/p6.jpg" alt="" /></a>
+											</div>
+										</article>
+
+                                        <article>
+											<a class="image" target="_blank" rel="noopener noreferrer"></a>
+											<div class="" >
+												<h3><a target="_blank" rel="noopener noreferrer">Calculations</a></h3>
+												<p>The following calculations were created in the Power BI reports using DAX (Data Analysis Expressions):<p>
+                                                    <b>60-Day Revenue</b> = 
+                                                    <br>CALCULATE([Total Revenue],
+                                                    <br>DATESINPERIOD('Calendar'[date],
+                                                    <br>MAX('Calendar'[date]),-60,DAY))
+													
+                                                    <p><b>% Weekend Transactions</b>  = [Weekend Transactions] / [Total Transactions]
+                                                    
+                                                    <p><b>All Returns</b> = CALCULATE([Total Returns], ALL(Returns))
+
+                                                    <p><b>All Transactions</b> = CALCULATE([Total Transactions], ALL(Transaction_Data))
+                                                    
+                                                    <p><b>Last Month Profit</b> = 
+                                                    <br>CALCULATE([Total Profit], 
+                                                    <br>DATEADD('Calendar'[date],-1,MONTH))
+
+                                                    <p><b>Last Month Returns</b> = 
+                                                    <br>CALCULATE([Total Returns], 
+                                                    <br>DATEADD('Calendar'[date],-1,MONTH))
+
+                                                    <p><b>Last Month Revenue</b> = 
+                                                    <br>CALCULATE([Total Revenue], 
+                                                    <br>DATEADD('Calendar'[date],-1,MONTH))
+
+                                                    <p><b>Last Month Transactions</b> = 
+                                                    <br>CALCULATE([Total Transactions], 
+                                                    <br>DATEADD('Calendar'[date],-1,MONTH))
+
+                                                    <p><b>Profit Margin</b> = [Total Profit] / [Total Revenue]
+
+                                                    <p><b>Quantity Returns</b> = SUM(Returns[quantity])
+                                                    
+                                                    <p><b>Quantity Sold</b> = SUM(Transaction_Data[quantity])
+
+                                                    <p><b>Return Rate</b> = [Quantity Returns] / [Quantity Sold]
+                                                    
+                                                    <p><b>Revenue Target</b> = [Last Month Revenue] * 1.05
+                                                    
+                                                    <p><b>Total Cost</b> = SUMX(Transaction_Data, Transaction_Data[quantity] * RELATED(Products[product_cost]))
+                                                    
+                                                    <p><b>Total Revenue</b> = SUMX(Transaction_Data, Transaction_Data[quantity]  * RELATED(Products[product_retail_price]))
+                                                        
+                                                    <p><b>Total Profit</b> = Total Revenue] - [Total Cost]
+                                                    
+                                                    <p><b>Total Returns</b> = COUNTROWS(Returns)
+                                                                
+                                                    <p><b>Total Transactions</b> = COUNTROWS(Transaction_Data)
+                                                                        
+                                                    <p><b>Unique Products</b> = DISTINCTCOUNT(Products[product_name])
+                                                                            
+                                                    <p><b>Weekend Transactions</b> = CALCULATE([Total Transactions], 'Calendar'[Weekend] = "Y")
+                                                                                
+                                                    <p><b>YTD Revenue</b> = CALCULATE([Total Revenue], DATESYTD('Calendar'[date]))
+											</div>
+										</article>
+
+										
+									</div>
+								</div>
+							</section>
+
+                        <!-- Four -->
+                        <section id="three">
+                            <div class="container">
+									<div class="features">
+									<article>
+                                        <a class="image" target="_blank" rel="noopener noreferrer"><img src="" alt="" /></a>
+                                        <div class="" >
+                                            <h3><br><atarget="_blank" rel="noopener noreferrer">Dashboard Overview</a></h3>
+                                                <a class="image" target="_blank" rel="noopener noreferrer"><img src="images/subpage/p10.jpg" alt="" /></a>
+                                                <p><p><b>Key Insights:</b>
+                                                
+                                                <br>•	Hermanos, Ebony, and Tell Tale are the Top 3 product brands that generate the highest income.
+                                                <br>•	Plato products brand is the highest profitable brand.
+                                                <br>•	Horatio products brand have the highest return rate of 1.25%.
+                                        </div>
+                                    </article>
+								</div>
+							</section>
+						 
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li><br><br>
+									
+								<!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
